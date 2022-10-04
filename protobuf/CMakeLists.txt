@@ -30,6 +30,7 @@ set(protobuf_MODULE_COMPATIBLE TRUE CACHE BOOL "protobuf_MODULE_COMPATIBLE" FORC
 find_package(Protobuf CONFIG REQUIRED)
 message(STATUS "Using protobuf ${Protobuf_VERSION}")
 include_directories(${Protobuf_INCLUDE_DIRS})
+include_directories(${protobuf_INCLUDE_DIRS})
 
 if(${TRITON_COMMON_ENABLE_GRPC})
   find_package(gRPC CONFIG REQUIRED)
